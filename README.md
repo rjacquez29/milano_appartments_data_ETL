@@ -25,8 +25,8 @@ To use this project, follow these steps:
 1. **Clone the Repository**:
    
 
-git clone https://github.com/yourusername/milano-real-estate.git
-cd milano-real-estate
+`git clone https://github.com/rjacquez29/milano_appartments_data_ETL.git`\
+`cd milano_appartments_data_ETL`
 
 
 
@@ -35,7 +35,7 @@ cd milano-real-estate
 Make sure you have Python 3.x installed. Install the required Python packages using pip:
 
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 
 3. **Set Up Google Cloud Credentials**:
@@ -47,7 +47,7 @@ Before using `load_bigquery.py`, make sure to set up your Google Cloud credentia
 Execute the main script to start the data scraping and processing pipeline:
 
 
-python main.py
+`python main.py`
 
 
 This script will scrape new listings, clean and preprocess the data, and load it into Google BigQuery.
