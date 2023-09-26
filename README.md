@@ -63,7 +63,7 @@ Special thanks to [geopy](https://geopy.readthedocs.io/en/stable/), [Beautiful S
 
 ## Contact
 
-If you have any questions or suggestions, please feel free to contact us:
+If you have any questions or suggestions, please feel free to contact me:
 
 Raymund Jacquez
 Email: r.jacquez@outlook.com
