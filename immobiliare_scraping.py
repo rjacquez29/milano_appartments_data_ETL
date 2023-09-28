@@ -147,7 +147,7 @@ def main():
             time.sleep(sleep)
             print(f"  Scraped {index}/{len(diff)} webpage", end="\r")
 
-        new_listings = df_update
+        new_listings = df_update.copy()
 
         df_update = pd.concat([df, df_update], axis=0)
         df_update.to_parquet(

@@ -86,8 +86,6 @@ def load_to_bigquery():
                 )
             )
 
-    keep_running = True
-
     for table_name, schema in schemas.items():
         source_df = pd.read_excel(Path(".").resolve() / "Data" / f"{table_name}.xlsx")
         job_config = bigquery.LoadJobConfig(
