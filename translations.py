@@ -46,3 +46,13 @@ heating_source = {
     "alimentato a gpl": "LPG",
     "alimentato a solare": "Solar",
 }
+
+condition = {
+    "Ottimo / Ristrutturato": "Excellent / Renovated",
+    "Buono / Abitabile": "Good / Habitable",
+    "Nuovo / In costruzione": "New / Under Construction",
+    "Da ristrutturare": "To be renovated",
+    "Partecipabile": "Participable",
+    "Sospesa": "Suspended",
+    "Non partecipabile": "Non-participable",
+}

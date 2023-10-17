@@ -47,6 +47,9 @@ def clean_data(df: pd.DataFrame):
     clean_data["Price"] = pd.to_numeric(
         df.prezzo.str.replace(".", "").str.strip("€ "), errors="coerce"
     )
+    clean_data["Building_expenses"] = pd.to_numeric(
+        df["spese condominio"].str.extract(r"(\d+)")[0], errors="coerce"
+    )
 
     ############# Rooms and building info
 
@@ -66,6 +69,8 @@ def clean_data(df: pd.DataFrame):
     clean_data["Total_building_floor"] = df["totale piani edificio"].str.extract(
         r"(\d+)"
     )
+    clean_data["Year_of_construction"] = df["anno di costruzione"].astype("Int64")
+    clean_data["Condition"] = df["stato"].str.strip().replace(translations.condition)
 
     ############### Heating and Energy efficiency
 
@@ -117,6 +122,7 @@ def clean_data(df: pd.DataFrame):
 
     # Drop rows with NaN values in 'Price' and 'Floor_area' columns
     clean_data.dropna(subset=["Price", "Floor_area"], inplace=True)
+    clean_data.drop_duplicates(inplace=True)
 
     # Print a success message
     print(colored(f"Data cleaning completed successfully!", "green", attrs=["bold"]))

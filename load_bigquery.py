@@ -34,12 +34,14 @@ def load_to_bigquery():
         ],
         milano_annunci=[
             bigquery.SchemaField("Date", "TIMESTAMP", mode="NULLABLE"),
-            bigquery.SchemaField("Price", "INT64", mode="NULLABLE"),
+            bigquery.SchemaField("Price", "FLOAT64", mode="NULLABLE"),
+            bigquery.SchemaField("Building_expenses", "FLOAT64", mode="NULLABLE"),
             bigquery.SchemaField("Rooms", "FLOAT64", mode="NULLABLE"),
             bigquery.SchemaField("Bathrooms", "FLOAT64", mode="NULLABLE"),
             bigquery.SchemaField("kitchen_type", "STRING", mode="NULLABLE"),
             bigquery.SchemaField("Floor_area", "INT64", mode="NULLABLE"),
             bigquery.SchemaField("Floor_level", "STRING", mode="NULLABLE"),
+            bigquery.SchemaField("Year_of_construction", "INT64", mode="NULLABLE"),
             bigquery.SchemaField("Elevator", "FLOAT64", mode="NULLABLE"),
             bigquery.SchemaField("Wheelchair_accessible", "FLOAT64", mode="NULLABLE"),
             bigquery.SchemaField("Total_building_floor", "FLOAT64", mode="NULLABLE"),
@@ -54,6 +56,7 @@ def load_to_bigquery():
             bigquery.SchemaField("features", "STRING", mode="NULLABLE"),
             bigquery.SchemaField("Neighborhood", "STRING", mode="NULLABLE"),
             bigquery.SchemaField("Address", "STRING", mode="NULLABLE"),
+            bigquery.SchemaField("Condition", "STRING", mode="NULLABLE"),
         ],
     )
 
